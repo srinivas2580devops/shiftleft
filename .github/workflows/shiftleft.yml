@@ -1,3 +1,5 @@
+name: shiftleft
+on: push
 source:
   branch: main
   scan: 274 # provide either branch or scan, not both
