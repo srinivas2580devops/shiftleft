@@ -5,3 +5,51 @@ As of now we are deploying the website on ARO like below
 3.That site folder we are copying the data to PVC on ARO 
 4. Now website will be visualize with the content from usr/share/nginx/html on PVC
 5.For multiple website. we created a sub directories in the PVC. copying the data to sub directories in pvc and visualize the websites  
+
+
+
+---------
+
+
+Pros of Using Containers for Hosting Multiple Websites:
+
+Isolation: Each website runs in its own container, providing isolation and preventing interference between websites.
+Scalability: Containers can be scaled individually, allowing you to allocate resources based on each website's demands.
+Flexibility: You can easily update, modify, or replace containers for individual websites without affecting others.
+Customization: Each container can have its own configurations, dependencies, and versions, offering customization options.
+Container Orchestration: Tools like Kubernetes or OpenShift provide robust container orchestration capabilities for managing multiple containers efficiently.
+Resource Efficiency: Containers are lightweight and share resources efficiently, optimizing resource usage.
+Cons of Using Containers for Hosting Multiple Websites:
+
+Management Overhead: Managing multiple containers introduces additional complexity in terms of deployment, monitoring, and maintenance.
+Resource Allocation: Allocating resources (CPU, memory, etc.) to each container requires careful planning and monitoring to ensure optimal performance.
+Networking Complexity: Managing network communication and routing between containers and external services can be complex, especially for multiple websites.
+Scaling Challenges: Scaling multiple containers while maintaining performance and reliability requires a well-designed scaling strategy.
+Persistent Storage: Containers are typically designed for ephemeral storage, so managing persistent data storage requires additional configurations and solutions.
+Security Considerations: Each container needs to be secured individually, and container security best practices must be followed to mitigate security risks.
+Cost: Running multiple containers may incur higher costs compared to a shared storage approach like PVCs, especially if each container requires significant 
+
+
+
+
+--------------
+
+Portability: Containers are highly portable and can run consistently across different environments, including development, testing, and production.
+Resource Efficiency: Containers share the host OS kernel and utilize resources efficiently, leading to better resource utilization compared to traditional virtual machines.
+Isolation: Containers provide process-level isolation, ensuring that applications run independently without interference from other containers.
+Scalability: Containers can be scaled horizontally to handle varying workloads, improving application performance and responsiveness.
+Fast Deployment: Containers can be deployed quickly, enabling faster development cycles and continuous integration/continuous deployment (CI/CD) pipelines.
+Versioning and Rollback: Containers support versioning, allowing developers to easily manage and roll back to previous versions of applications.
+Customization: Each container can have its own configurations, dependencies, and versions, offering customization options for different environments or application instances.
+DevOps Enablement: Containers promote DevOps practices by facilitating collaboration between development and operations teams, leading to faster delivery and deployment of applications.
+Microservices Architecture: Containers are well-suited for microservices-based architectures, enabling modular and scalable application development.
+Cons of Using Containers:
+
+Persistent Storage: Containers are typically designed for ephemeral storage, meaning data is lost when a container is terminated unless using persistent volumes or external storage solutions.
+Complex Networking: Managing network communication and security between containers and external services can be complex, especially in distributed architectures.
+Security Challenges: Containers introduce security challenges such as container breakout vulnerabilities and the need for secure container images and runtime environments.
+Orchestration Overhead: Managing and orchestrating containers at scale using tools like Kubernetes or Docker Swarm requires additional complexity and expertise.
+Learning Curve: Adopting containers and container orchestration technologies may require a learning curve for development and operations teams.
+Stateful Applications: Containers are more suited for stateless applications by default, requiring special considerations and configurations for stateful applications that require persistent data storage.
+Dockerization Overhead: The process of containerizing applications (Dockerization) may introduce overhead and additional dependencies, especially for legacy applications.
+Resource Constraints: Containers share resources with the host and other containers, which can lead to resource contention and performance issues if not managed properly.
