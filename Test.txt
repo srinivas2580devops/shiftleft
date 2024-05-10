@@ -1,0 +1,7 @@
+As of now we are deploying the website on ARO like below
+
+1 building the docs with mkdocs
+2. once after build site folder content will come. 
+3.That site folder we are copying the data to PVC on ARO 
+4. Now website will be visualize with the content from usr/share/nginx/html on PVC
+5.For multiple website. we created a sub directories in the PVC. copying the data to sub directories in pvc and visualize the websites  
